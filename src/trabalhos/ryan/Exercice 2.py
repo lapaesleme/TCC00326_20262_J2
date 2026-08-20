@@ -18,6 +18,7 @@ elif valor < 0 :
 else:
     print("O valor é nulo. ")
 
+
 numero = int(input("Diga um numero"))
 
 if numero % 2 == 0:
@@ -26,4 +27,27 @@ if numero % 2 == 0:
 else:
     print("O numero é ímpar. ")
 
-    
+
+
+media = int(input("Diga sua primeira nota: "))
+nota = int(input("Diga sua segunda nota: "))
+
+if media + nota / 2 >= 6:
+    print("Parabéns, você foi aprovado !!! ")
+
+else:
+    print("Infelizmente, você está reprovado !!! ")
+
+
+x= int(input("Digite um algarismo: "))
+y = int(input("Digite um segundo algarismo: "))
+Soma = x + y
+Subtracao = x - y
+Produto = x * y
+Divisao  = x / y
+
+print("Soma : " , Soma, "Subtracao: ", Subtracao, "Produto: ", Produto,"e Divisão : ", Divisao)
+
+if x / y == 0:
+    print("O resultado é 0 ")
+
