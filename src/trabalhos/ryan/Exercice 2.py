@@ -1,0 +1,29 @@
+idade = int(input("Diga sua idade: "))
+
+if idade >= 18 :
+    print("Você é maior de idade. ")
+
+else:
+    print("Você é menor de idade. ")
+
+
+valor = int(input("Digite um valor: "))
+
+if valor > 0:
+    print("Valor é positivo. ")
+
+elif valor < 0 :
+    print("Valor é negativo ")
+
+else:
+    print("O valor é nulo. ")
+
+numero = int(input("Diga um numero"))
+
+if numero % 2 == 0:
+    print("O valor é par. ")
+
+else:
+    print("O numero é ímpar. ")
+
+    
