@@ -41,6 +41,14 @@ else:
 
 x= int(input("Digite um algarismo: "))
 y = int(input("Digite um segundo algarismo: "))
+
+operacao = input('''Escolha a operação desejada:
++ para adição
+- para subtração 
+* para multiplicação
+/ para divisão
+Digite aqui: ''')
+
 Soma = x + y
 Subtracao = x - y
 Produto = x * y
@@ -48,6 +56,15 @@ Divisao  = x / y
 
 print("Soma : " , Soma, "Subtracao: ", Subtracao, "Produto: ", Produto,"e Divisão : ", Divisao)
 
-if x / y == 0:
-    print("O resultado é 0 ")
+if Soma == '+':
+    print("{x} + {y} = {x + y}: ")
+
+elif Subtracao == '-':
+    print("{x} - {y} = {x - y}: ")
+
+elif Produto == '*':
+    print("{x} * {y} = {x * y} ")
+
+if Divisao == '/':
+   print("{x} / {y} = {x / y}")
 
