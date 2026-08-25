@@ -1,0 +1,20 @@
+numero = [1,43,-4,6,2,10,8,78,100,56]
+
+positivo = 0
+impares = 0
+pares = 0
+zeros = 0
+negativo = 0
+for i in range (0, len(numero)):
+    if numero [i] > 0:
+        positivo = positivo + 1
+    elif numero[i] < 0:
+        negativos = negativo + 1
+    else:
+        zeros = zeros + 1
+    if numero [i] % 2 == 0:
+        pares = pares + 1
+    else:
+        impares = impares + 1
+print("positivos:", positivo, "negativos:", negativos, "impares:", impares, "pares:", pares, "zeros:", zeros)
+
