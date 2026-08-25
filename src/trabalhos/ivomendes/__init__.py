@@ -1,8 +1,11 @@
-notas = [0,7,2,3,48,8,5,-3,6,7,-2,8,9,10]
+notas = [0,7,2,3,8,5,11,9,6,7,8,9,10]
 i = 0
+quantidade = 0
 for nota in notas:
-    i = notas + i
-    media = i / 11
+    if nota >= 0 and nota <= 10:
+        i = i + nota
+        quantidade = quantidade + 1
+media = i / quantidade
 print("media:", media)
 if media > 7:
     print("bom")
