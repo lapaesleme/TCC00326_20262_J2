@@ -4,7 +4,7 @@ soma = 0
 quantidade = 0
 i = 0
 
-while notas[i] != -1:
+while i < len(notas):
     if notas[i] >= 0 and notas[i] <= 10:
        soma = soma + notas[i]
        quantidade = quantidade + 1
