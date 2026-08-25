@@ -1,0 +1,24 @@
+notas = [1,5,-4,6,2,10,8,7,10,-1]
+
+soma = 0
+quantidade = 0
+i = 0
+
+while notas[i] != -1:
+    if notas[i] >= 0 and notas[i] <= 10:
+       soma = soma + notas[i]
+       quantidade = quantidade + 1
+    i = i + 1
+    
+print("As notas são:", notas)
+
+if quantidade > 0:
+    media = soma / quantidade
+    print("A média da turma é:", media)
+
+    if media >= 7:
+        print("O desempenho da turma foi bom")
+    elif media >= 5:
+        print("O desempenho da turma foi regular")
+    else:
+        print("O desempenho da turma foi ruim")
