@@ -1,3 +1,6 @@
+
+
+#2.2
 notas = [0,7,2,3,8,5,11,9,6,7,8,9,10]
 i = 0
 quantidade = 0
@@ -13,3 +16,4 @@ elif media >= 5:
     print("ok")
 else:
     print("baixo")
+
