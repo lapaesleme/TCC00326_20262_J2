@@ -17,3 +17,10 @@ elif media >= 5:
 else:
     print("baixo")
 
+def soma_listas(lista):
+    if lista == []:
+        return 0
+    else:
+        return lista[0] + soma_listas(lista[1:])
+numeros = [1,2,3,4,5,6,7,8,9,10]
+print(soma_listas(numeros))
