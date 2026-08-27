@@ -1,0 +1,9 @@
+numeros = [2,3,4,5,6,7,8]
+
+def recursiva(lista, i):
+    if 0 <= i < len(lista):
+        return lista[i] + recursiva(lista, i)
+    else:
+        return 0
+
+print(recursiva(i))
