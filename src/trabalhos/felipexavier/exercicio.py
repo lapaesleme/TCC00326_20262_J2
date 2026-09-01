@@ -1,6 +1,6 @@
 def acessar ():
 
-    senhas = {"felipe": "malenia","giulia":"marika","elden":"ring"}
+    senhas = {"felipe":"radagon","giulia":"marika","elden":"ring"}
 
     entrar = input("Deseja acessar sistema? (s/n) ")
 
@@ -29,5 +29,6 @@ def acessar ():
             print("Acesso Negado")
 
             entrar = input("Deseja acessar sistema? (s/n) ")
+
 
 acessar()
