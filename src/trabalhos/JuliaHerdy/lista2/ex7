@@ -1,0 +1,14 @@
+
+def maior_5(n):
+    return n > 5
+
+def contar_se(lista, criterio):
+    contador = 0
+    for e in lista:
+        if criterio(e):
+            contador += 1
+    return contador
+
+
+lista = [2,5,7,10,1,12]
+print(contar_se(lista, maior_5))
