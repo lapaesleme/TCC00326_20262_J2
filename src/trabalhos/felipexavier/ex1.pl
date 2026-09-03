@@ -7,7 +7,7 @@ vendas = [
 ]
 vtotal = 0
 for x in vendas:
-    x = vendas["preco"] * vendas["quantidade vendida"]
-    vtotal += x
+    faturamento = x["preco"] * x["quantidade vendida"]
+    vtotal += faturamento
 
-print (x)
+print (vtotal)
