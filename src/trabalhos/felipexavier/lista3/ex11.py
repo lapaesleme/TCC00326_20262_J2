@@ -3,23 +3,37 @@ vendas = [
 {"produto":"monitor","categoria":"n_pc","preco":200,"quantidade vendida":7},
 {"produto":"mouse","categoria":"n_pc","preco":40,"quantidade vendida":11},
 {"produto":"gabinete","categoria":"pc","preco":300,"quantidade vendida":6},
+{"produto":"gabinete","categoria":"pc","preco":280,"quantidade vendida":2},
 {"produto":"processador","categoria":"pc","preco":800,"quantidade vendida":4}
 ]
 vtotal = 0
 vpctotal = 0
 vnpctotal = 0
-for x in vendas:
-    faturamento = x["preco"] * x["quantidade vendida"]
-    vtotal += faturamento
-    media = vtotal/len(vendas)
-    if x["categoria"] == "n_pc":
-        faturamento = x["preco"] * x["quantidade vendida"]
-        vnpctotal += faturamento
-    elif x["categoria"] == "pc":
-        faturamento = x["preco"] * x["quantidade vendida"]
-        vpctotal += faturamento
-    else:
-        pass
+faturamentos={}
+for venda in vendas:
+    total_venda = venda["preco"] * venda["quantidade vendida"]
+    faturamentos[venda["produto"]]=faturamentos.get(venda["produto"],0)+total_venda
+print (faturamentos)
 
-print(f"Faturamento total: {vtotal}, Média do valor total: {media}, faturamento de peças de pc: {vpctotal}, faturamento dos acessórios: {vnpctotal}")
+faturamentos_cat={}
+for venda in vendas:
+    total_venda = venda["preco"] * venda["quantidade vendida"]
+    faturamentos_cat[venda["categoria"]]=faturamentos_cat.get(venda["categoria"],0)+total_venda
+print (faturamentos_cat)
+
+maior = 0
+produto = None
+for faturamento in faturamentos:
+    #print (faturamento)
+    if faturamentos[faturamento] > maior:
+        maior = faturamentos[faturamento]
+        produto = faturamento
+print((maior, produto))
+
+
+
+
+
+#print(faturamento)
+
 
