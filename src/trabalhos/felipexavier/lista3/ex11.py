@@ -5,21 +5,44 @@ vendas = [
 {"produto":"gabinete","categoria":"pc","preco":300,"quantidade vendida":6},
 {"produto":"processador","categoria":"pc","preco":800,"quantidade vendida":4}
 ]
+
+soma_quantidade = 0
+maior = 0
+produto = 0
 vtotal = 0
 vpctotal = 0
 vnpctotal = 0
-for x in vendas:
-    faturamento = x["preco"] * x["quantidade vendida"]
+faturamento_cat = {}
+
+for prod in vendas:
+    val_prod = prod["preco"] * prod["quantidade vendida"]
+    faturamento_cat[prod["produto"]] = faturamento_cat.get(prod["produto"], 0) + val_prod
+
+for prod in faturamento_cat:
+    if faturamento_cat[prod] > maior:
+        maior = faturamento_cat[prod]
+        produto = prod
+
+for venda in vendas:
+    faturamento = venda["preco"] * venda["quantidade vendida"]
     vtotal += faturamento
-    media = vtotal/len(vendas)
-    if x["categoria"] == "n_pc":
-        faturamento = x["preco"] * x["quantidade vendida"]
+    if venda["categoria"] == "n_pc":
+        faturamento = venda["preco"] * venda["quantidade vendida"]
         vnpctotal += faturamento
-    elif x["categoria"] == "pc":
-        faturamento = x["preco"] * x["quantidade vendida"]
+    elif venda["categoria"] == "pc":
+        faturamento = venda["preco"] * venda["quantidade vendida"]
         vpctotal += faturamento
     else:
         pass
 
-print(f"Faturamento total: {vtotal}, Média do valor total: {media}, faturamento de peças de pc: {vpctotal}, faturamento dos acessórios: {vnpctotal}")
+for quantidade in vendas:
+    soma_quantidade += quantidade["quantidade vendida"]
 
+media = soma_quantidade / len(vendas)
+
+
+print(f"Faturamento total: {vtotal}, Média de produtos vendidos: {media}, faturamento de peças de pc: {vpctotal}, faturamento dos acessórios: {vnpctotal}")
+print("--------------------------------------------------------------------------------------------------------------------------")
+print(f"Faturamento por produto: {faturamento_cat}")
+print("--------------------------------------------------------------------------------------------------------------------------")
+print(f"Produto de maior faturamento: {produto}, total de {maior} reais.")
