@@ -15,5 +15,6 @@ def main():
     for i, nome in enumerate(nomes, start=1):
         print(f"{i}. {nome}")
 
+
 if __name__ == "__main__":
     main()
