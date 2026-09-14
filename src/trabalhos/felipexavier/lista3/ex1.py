@@ -6,7 +6,7 @@ vendas = [
 {"produto":"processador","categoria":"pc","preco":800,"quantidade vendida":4}
 ]
 
-soma_quantidade = 0
+
 maior = 0
 produto = 0
 vtotal = 0
@@ -35,8 +35,9 @@ for venda in vendas:
     else:
         pass
 
-for quantidade in vendas:
-    soma_quantidade += quantidade["quantidade vendida"]
+soma_quantidade = 0
+for venda in vendas:
+    soma_quantidade += venda["quantidade vendida"]
 
 media = soma_quantidade / len(vendas)
 

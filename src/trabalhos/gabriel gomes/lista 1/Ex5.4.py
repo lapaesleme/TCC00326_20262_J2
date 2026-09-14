@@ -23,16 +23,20 @@ while opcao != 4:
             print("novo saldo atual: R$", saldo)
         else:
             print("valor do deposito invalido.")
+
     elif opcao == 3:
+
         valor = float(input("digite o valor do saque:"))
-        if valor <= 0:
+
+        if valor   <= 0:
             print("valor do saque invalido.")
-        elif valor > saldo:
+        elif valor  > saldo:
             print("saldo insuficiente.")
         else:
             saldo -= valor
             print("saque realizado com sucesso.")
             print("novo saldo: R$",saldo)
+
     elif opcao == 4:
 
         print("operação finalizada.")
