@@ -17,3 +17,7 @@ def rentabilidade(ativo):
 
 for ativo in ativos:
     print(ativo["nome"], "resultado", rentabilidade(ativo))
+
+
+for i in [0,1,2,3]:
+    print(i)
