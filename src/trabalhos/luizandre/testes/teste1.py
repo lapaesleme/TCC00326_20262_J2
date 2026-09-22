@@ -4,6 +4,7 @@ var = {"nome": "Luiz"}
 #var = dict()
 
 var["tel"]=99999999
+var["nome"]="Andre"
 
 print(list(var.items()))
 

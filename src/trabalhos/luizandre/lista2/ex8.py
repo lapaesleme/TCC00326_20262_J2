@@ -6,7 +6,7 @@ def maiusculas (texto ):
 def processar_textos (textos, processador):
     novaLista = []
     for t in textos:
-        novaLista.append(maiusculas(t))
+        novaLista.append(processador(t))
     return novaLista
 
 print (processar_textos(textos, maiusculas))
