@@ -1,14 +1,14 @@
-v = [1, 4, 5, 8, 9, 0, 2]
+lista = [1, 4, 5, 8, 9, 0, 2]
 
 
-def buscar(vetor, n, i):
-    if 0 <= i < len(vetor):
-        if vetor[i] == n:
+def buscar(numero, vetor, indice):
+    if 0 <= indice < len(vetor):
+        if vetor[indice] == numero:
             return True
         else:
-            return buscar(vetor, n, i + 1)
+            return buscar(numero, vetor, indice + 1)
     else:
         return False
 
 
-print(buscar(v, 44, 0))
+print(buscar(44, lista, 0))
