@@ -1,12 +1,15 @@
 textos = ["tdagfasdf", "dsfas", ""]
 
-def maiusculas (texto ):
+
+def maiusculas(texto):
     return texto.upper()
 
-def processar_textos (textos, processador):
+
+def processar_textos(textos, processador):
     novaLista = []
     for t in textos:
         novaLista.append(processador(t))
     return novaLista
 
-print (processar_textos(textos, maiusculas))
+
+print(processar_textos(textos, maiusculas))

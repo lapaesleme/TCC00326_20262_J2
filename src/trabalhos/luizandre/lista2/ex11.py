@@ -1,7 +1,7 @@
+v = [1, 4, 5, 8, 9, 0, 2]
 
-v = [ 1,4,5,8,9,0, 2]
 
-def buscar(vetor, n, i ):
+def buscar(vetor, n, i):
     if 0 <= i < len(vetor):
         if vetor[i] == n:
             return True
@@ -10,5 +10,5 @@ def buscar(vetor, n, i ):
     else:
         return False
 
-print (buscar(v, 44, 0))
 
+print(buscar(v, 44, 0))
