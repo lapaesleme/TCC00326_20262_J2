@@ -1,4 +1,4 @@
-numeros = [1, 43, -4, 6, 2, 10, 8, 0, 78, 100, 56]
+numeros = [0, 1, 43, -4, 6, 2, 10, 8, 0, 78, 100, 56]
 
 
 def estatisticas(numeros):
