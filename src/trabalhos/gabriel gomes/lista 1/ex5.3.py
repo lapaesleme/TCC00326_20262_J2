@@ -17,6 +17,7 @@ print("(A) print")
 print("(B) append")
 print("(C) As duas acima")
 resposta = input("resposta:").upper()
+
 if resposta == "C":
     print("resposta certa!")
     pontuaçao +=1

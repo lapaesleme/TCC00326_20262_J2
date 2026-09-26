@@ -7,7 +7,10 @@ alunos = [
 
 
 def calcular_media(notas):
-    return sum(notas) / len(notas)
+    soma = 0
+    for nota in notas:
+        soma += nota
+    return soma / len(notas)
 
 
 def classificar(media):
@@ -20,31 +23,31 @@ def classificar(media):
 
 
 def acima_da_media(alunos):
-    medias = []
+    alunos_selecionados = []
+
+    soma = 0
+    for aluno in alunos:
+        media = calcular_media(aluno["notas"])
+        soma += media
+    media_turma = soma / len(alunos)
 
     for aluno in alunos:
         media = calcular_media(aluno["notas"])
-        medias.append(media)
+        if media > media_turma:
+            alunos_selecionados.append({"nome":aluno["nome"],"media":media})
 
-    media_turma = sum(medias) / len(medias)
-
-    return media_turma
+    return alunos_selecionados
 
 
 def gerar_resumo(alunos):
-    media_turma = acima_da_media(alunos)
-
-    print("Média da turma:", media_turma)
-    print()
+    resumo = []
 
     for aluno in alunos:
         media = calcular_media(aluno["notas"])
         situacao = classificar(media)
+        resumo.append({"nome":aluno["nome"],"situacao":situacao})
 
-        print("Aluno:", aluno["nome"])
-        print("Média:", media)
-        print("Situação:", situacao)
-        print()
+    return resumo
 
-
-gerar_resumo(alunos)
+print(acima_da_media(alunos))
+print(gerar_resumo(alunos))
