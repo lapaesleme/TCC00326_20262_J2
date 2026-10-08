@@ -1,0 +1,2 @@
+Um Large Language Model (Modelo de Linguagem em Grande Escala, ou LLM) é um tipo avançado de inteligência artificial treinado para entender, resumir, traduzir e gerar textos de forma semelhante a um ser humano.
+Eles são a tecnologia por trás de assistentes virtuais e chatbots modernos, como o ChatGPT ou o Gemini.
