@@ -1,0 +1,22 @@
+[
+  {
+    "nome": "Ana",
+    "idade": 28,
+    "ativo": true,
+    "habilidades": [
+      "JavaScript",
+      "Python",
+      "SQL"
+    ]
+  },
+  {
+    "nome": "Ana",
+    "idade": 28,
+    "ativo": true,
+    "habilidades": [
+      "JavaScript",
+      "Python",
+      "SQL"
+    ]
+  }
+]

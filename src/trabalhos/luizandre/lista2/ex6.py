@@ -12,5 +12,6 @@ def executar_operacao(a, b, operacao):
 
 a = 2
 b = 3
+f = "somar"
 print(executar_operacao(a, b, somar))
 print(executar_operacao(a, b, subtrair))
