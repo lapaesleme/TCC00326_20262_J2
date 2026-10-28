@@ -10,6 +10,7 @@ def eh_primo(n):
                 return False
         return True
 
+
 n1 = 23
 n2 = 115
 primos = []
